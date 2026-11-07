@@ -1,21 +1,130 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Qari Asif Amin Institute - Online Quran Classes For All Countries</title>
-<style>body{font-family:Arial;margin:0;background:#f8fafc}header{background:#14532d;color:#fff;padding:18px;text-align:center}.wrap{max-width:900px;margin:auto;padding:14px}.card{background:#fff;border-radius:14px;padding:16px;margin:14px 0;box-shadow:0 2px 8px rgba(0,0,0,.08)}.btn{display:block;text-align:center;padding:13px;border-radius:10px;font-weight:bold;text-decoration:none;color:#fff;margin:8px 0}.green{background:#16a34a}.red{background:#dc2626}.blue{background:#2563eb}.dark{background:#111}.countries{display:flex;flex-wrap:wrap;gap:8px}.countries button{padding:10px 12px;border-radius:20px;border:1px solid #ddd;background:#fff;cursor:pointer;font-weight:bold}input,select{width:100%;padding:11px;border:1px solid #ddd;border-radius:10px;margin:6px 0}video{width:100%;border-radius:12px;background:#000}</style></head>
-<body><header><h1>🕌 Qari Asif Amin Institute</h1><p>Online Quran Classes For <b>ALL COUNTRIES 🌍</b> | Qaida, Nazra, Hifz with Tajweed</p><p>✅ 1 Free Trial Class</p><a href="https://wa.me/923454415638?text=Salam, mujhe Free Trial chahiye" style="display:inline-block;background:#25D366;color:#fff;padding:11px 18px;border-radius:20px;text-decoration:none;font-weight:bold">📲 WhatsApp: +92 345 4415638</a></header>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>قاری آصف امین انسٹیٹیوٹ - Online Quran Academy</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui;background:#04120c;color:#fff}
+header{background:linear-gradient(135deg,#052e1d,#0a5c38,#c9a227);padding:28px 16px;text-align:center;border-bottom:4px solid #ffd700}
+h1{margin:5px 0;font-size:30px}h2{color:#ffd700}.gold{color:#ffd700}
+.wrap{max-width:1000px;margin:auto;padding:14px}
+.card{background:#0d2419;border:1px solid #2b6b4a;border-radius:20px;padding:18px;margin:14px 0;box-shadow:0 12px 35px rgba(0,0,0,.45)}
+input,select,textarea,button{width:100%;padding:13px;border-radius:13px;border:0;margin:7px 0;font-size:15px}
+input,select,textarea{background:#fff;color:#111}button{background:#c9a227;color:#111;font-weight:900;cursor:pointer}
+.btn-green{background:#25D366}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}h1{font-size:24px}}
+.pill{display:inline-block;background:#ffd700;color:#111;padding:7px 14px;border-radius:25px;font-weight:900;margin:3px}
+.hidden{display:none}table{width:100%;border-collapse:collapse;background:#fff;color:#111;border-radius:12px;overflow:hidden}
+td,th{padding:9px;border-bottom:1px solid #ddd;text-align:right;font-size:13px}
+nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}nav button{width:auto;padding:11px 15px;background:#fff}
+a{color:#ffd700}.topbar{background:#000;padding:10px;text-align:center;font-weight:800}
+</style>
+</head>
+<body>
+<div class="topbar">🕌 قاری آصف امین انسٹیٹیوٹ | WhatsApp: +92 345 4415638</div>
+<header>
+<div style="font-size:52px">🕌</div>
+<h1>قاری آصف امین <span class="gold">انسٹیٹیوٹ</span></h1>
+<p style="font-size:18px">Qari Asif Amin Institute - Online Quran Academy</p>
+<p>نورانی قاعدہ • ناظرہ • حفظ قرآن • تجوید • ترجمہ • عربی</p>
+<div><span class="pill">3 دن فری ٹرائل</span><span class="pill">دنیا بھر میں کلاسز</span><span class="pill">Parental Watch</span></div>
+<br><br><a href="https://wa.me/923454415638" style="color:#fff;font-weight:900;background:#25D366;padding:12px 20px;border-radius:30px;text-decoration:none">📲 WhatsApp پر رابطہ کریں</a>
+</header>
+
 <div class="wrap">
-<div class="card"><h2>🌍 Select Your Country</h2><p id="countryMsg">Selected: <b>All Countries</b></p><div class="countries" id="countryList"></div></div>
-<div class="card"><h2>🎥 Hamari Videos</h2><label style="display:block;background:#dc2626;color:#fff;padding:14px;text-align:center;border-radius:10px;font-weight:bold;cursor:pointer">📱 + Gallery Se Video Lagao<input type="file" id="videoInput" accept="video/*" style="display:none"></label><div id="videoGallery"></div></div>
-<div class="card"><h2>📝 Admission Form - Free Trial</h2><input id="pname" placeholder="Parent Name"><input id="cname" placeholder="Bachay Ka Naam"><input id="age" placeholder="Bachay Ki Age"><select id="course"><option>Qaida</option><option>Nazra Quran</option><option>Hifz-e-Quran</option><option>Tajweed Course</option></select><input id="phone" placeholder="WhatsApp Number"><button class="btn green" onclick="submitForm()">✅ Free Trial Book Karo</button><p id="formMsg" style="color:green;font-weight:bold"></p></div>
-<div class="card"><h2>🔐 Admin Login</h2><p>Password: <b>Asifamin@83</b></p><input id="pass" type="password" placeholder="Admin Password"><button class="btn dark" onclick="login()">Login</button><div id="adminPanel" style="display:none"><h3>✅ Admin Panel</h3><div id="studentList"></div></div></div>
+<nav>
+<button onclick="show('home')">🏠 ویب سائٹ</button>
+<button onclick="show('trial')">📝 فری ٹرائل</button>
+<button onclick="show('find')">🔍 Find Students</button>
+<button onclick="show('video')">🎬 ویڈیو + ایڈ اسٹوڈیو</button>
+<button onclick="show('login')">🔐 لاگ ان</button>
+</nav>
+
+<div id="home" class="card">
+<h2>آن لائن قرآن کلاسز - دنیا بھر میں</h2>
+<p>USA • UK • Canada • Australia • UAE • Pakistan - بچوں اور بڑوں کے لیے، تجربہ کار اساتذہ، ایک ایک بچے پر مکمل توجہ، روزانہ رپورٹ والدین کو۔</p>
+<div class="grid">
+<div class="card"><b>📖 نورانی قاعدہ</b><p>بچوں کے لیے بنیاد، حروف، حرکات، جوڑ، تلفظ</p></div>
+<div class="card"><b>📖 ناظرہ قرآن</b><p>صحیح تلفظ کے ساتھ مکمل قرآن مجید</p></div>
+<div class="card"><b>🧠 حفظ قرآن</b><p>سبق / سبقی / منزل - روزانہ ٹریکنگ، روزانہ رپورٹ</p></div>
+<div class="card"><b>🎙️ تجوید و قیراط</b><p>مخارج، صفات، قواعد تجوید، خوبصورت لہجہ</p></div>
+<div class="card"><b>📚 ترجمہ و تفسیر</b><p>آسان اردو / انگلش ترجمہ، بنیادی اسلامی تعلیم</p></div>
+<div class="card"><b>🕌 عربی زبان</b><p>بچوں اور بڑوں کے لیے آسان عربی کورس</p></div>
 </div>
+<h3>فیس پلان</h3>
+<p>• 3 دن فری ٹرائل - پہلے کلاس دیکھیں، پھر فیصلہ کریں<br>• ماہانہ پلان • فیملی ڈسکاؤنٹ - 2 بچوں پر رعایت<br>• فیس کے لیے WhatsApp پر رابطہ کریں</p>
+<button class="btn-green" onclick="window.open('https://wa.me/923454415638?text=Assalam-o-Alaikum, mujhe 3 din free trial chahiye - Qari Asif Amin Institute')">📲 3 دن فری ٹرائل کے لیے WhatsApp کریں</button>
+<h3>والدین کیا کہتے ہیں؟</h3>
+<p>⭐⭐⭐⭐⭐ "میرے بیٹے نے 3 ماہ میں قاعدہ مکمل کر لیا، ماشاءاللہ بہت اچھے استاد ہیں۔" - UK سے والدہ</p>
+<p>⭐⭐⭐⭐⭐ "روزانہ رپورٹ آتی ہے، بچے کی پروگریس نظر آتی ہے۔" - USA سے والد</p>
+</div>
+
+<div id="trial" class="card hidden">
+<h2>3 دن فری ٹرائل فارم</h2>
+<input id="tname" placeholder="بچے / اسٹوڈنٹ کا نام">
+<input id="tage" placeholder="عمر">
+<select id="tcourse"><option>نورانی قاعدہ</option><option>ناظرہ</option><option>حفظ</option><option>تجوید</option><option>ترجمہ و عربی</option></select>
+<input id="tcountry" placeholder="ملک - USA / UK / Canada">
+<input id="tphone" placeholder="WhatsApp نمبر">
+<button onclick="submitTrial()">فارم بھیجیں - WhatsApp پر جائے گا</button>
+<p id="trialMsg"></p>
+</div>
+
+<div id="find" class="card hidden">
+<h2>🔍 Find Students - AI سافٹ ویئر</h2>
+<p>صرف ایڈمن کے لیے۔ ملک + شہر لکھیں، AI بتائے گا مانگ، کورس، ٹائم، فیس۔</p>
+<input id="fcountry" placeholder="ملک لکھیں - مثال: USA">
+<input id="fcity" placeholder="شہر لکھیں - مثال: London / New York">
+<button onclick="findStudents()">AI سے چیک کریں</button>
+<div id="findOut" class="card"></div>
+<h3>نیا اسٹوڈنٹ سیو کریں - ٹیچر کو دیں</h3>
+<input id="sname" placeholder="اسٹوڈنٹ کا نام">
+<input id="scountry" placeholder="ملک">
+<input id="scourse2" placeholder="کورس">
+<input id="steacher" placeholder="کس ٹیچر کو دینا ہے؟">
+<button onclick="saveStudent()">اسٹوڈنٹ سیو کریں</button>
+<div id="studentList"></div>
+</div>
+
+<div id="video" class="card hidden">
+<h2>🎬 ویڈیو + ایڈ اسٹوڈیو</h2>
+<p>گیلری سے ویڈیو / تصویر منتخب کریں، ٹائٹل لکھیں، لنک بنائیں، ہر جگہ شیئر کریں۔</p>
+<input type="file" id="vfile" accept="video/*,image/*">
+<input id="vtitle" placeholder="ویڈیو / ایڈ کا ٹائٹل - مثال: 3 دن فری ٹرائل">
+<textarea id="vcap" placeholder="کیپشن + ہیش ٹیگ - AI بنائے گا"></textarea>
+<button onclick="makeLink()">✨ AI کیپشن بنائیں + لنک بنائیں</button>
+<div id="videoOut"></div>
+<video id="preview" controls style="width:100%;display:none;border-radius:14px;margin-top:10px"></video>
+<p style="font-size:13px">اس لنک کو WhatsApp, TikTok, Facebook, YouTube ہر جگہ شیئر کریں۔ جو کلک کرے گا، ویڈیو دیکھ کر سیدھا آپ کی ویب سائٹ اور WhatsApp پر آئے گا۔</p>
+</div>
+
+<div id="login" class="card hidden">
+<h2>🔐 لاگ ان</h2>
+<p style="font-size:13px">پاسورڈ کہیں لکھا نہیں ہوگا۔ صرف آپ کو یاد ہوگا۔ اندر Change Password کا بٹن ہوگا۔</p>
+<select id="role"><option value="admin">ایڈمن - قاری صاحب</option><option value="teacher">ٹیچر</option><option value="student">اسٹوڈنٹ / والدین</option></select>
+<input type="password" id="pass" placeholder="پاسورڈ لکھیں">
+<button onclick="doLogin()">لاگ ان</button>
+<div id="dashboard"></div>
+</div>
+
+<div class="card"><h3>📞 رابطہ - قاری آصف امین انسٹیٹیوٹ</h3>
+<p>WhatsApp: <b>+92 345 4415638</b></p>
+<p>TikTok / YouTube / Facebook: Qari Asif Amin Institute</p>
+<a href="https://wa.me/923454415638">wa.me/923454415638</a>
+<p style="font-size:12px;color:#aaa">© Qari Asif Amin Institute - All Rights Reserved</p>
+</div>
+</div>
+
 <script>
-const countries=["All Countries 🌍","USA 🇺🇸","UK 🇬🇧","Canada 🇨🇦","UAE 🇦🇪","Australia 🇦🇺","Germany 🇩🇪","France 🇫🇷","Saudi Arabia 🇸🇦","Qatar 🇶🇦","Kuwait 🇰🇼","Oman 🇴🇲","Malaysia 🇲🇾","Turkey 🇹🇷","South Africa 🇿🇦"];
-let selected="All Countries";const cl=document.getElementById('countryList');
-countries.forEach(c=>{let b=document.createElement('button');b.textContent=c;b.onclick=()=>{selected=c;document.getElementById('countryMsg').innerHTML='Selected: <b>'+c+'</b>';};cl.appendChild(b)});
-let videos=JSON.parse(localStorage.getItem('videos')||'[]');
-function render(){let g=document.getElementById('videoGallery');if(videos.length==0){g.innerHTML='<p style="text-align:center;border:1px dashed #aaa;padding:14px;border-radius:12px">Abhi koi video nahi. Upar wale button se Gallery se video lagao.</p>';return}g.innerHTML=videos.map(v=>`<div style="border:1px solid #ddd;border-radius:12px;overflow:hidden;margin-top:12px"><video controls src="${v}"></video></div>`).join('')}
-render();document.getElementById('videoInput').addEventListener('change',e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{videos.unshift(r.result);localStorage.setItem('videos',JSON.stringify(videos));render();alert('✅ Video Lag Gayi!')};r.readAsDataURL(f)});
-function submitForm(){let s={p:document.getElementById('pname').value,c:document.getElementById('cname').value,co:document.getElementById('course').value,ct:selected};let arr=JSON.parse(localStorage.getItem('students')||'[]');arr.push(s);localStorage.setItem('students',JSON.stringify(arr));document.getElementById('formMsg').textContent='✅ Shukriya! Free Trial Book Ho Gayi.'}
-function login(){if(document.getElementById('pass').value==='Asifamin@83'){document.getElementById('adminPanel').style.display='block';let arr=JSON.parse(localStorage.getItem('students')||'[]');document.getElementById('studentList').innerHTML=arr.length?arr.map(s=>`<div style="border:1px solid #eee;padding:8px;border-radius:8px;margin:4px 0">👦 ${s.c} - Parent: ${s.p} - Course: ${s.co} - Country: ${s.ct}</div>`).join(''):'<p>Abhi koi student nahi.</p>';alert('Welcome Admin!')}else alert('Ghalat Password')}
-</script></body></html>
+let students=JSON.parse(localStorage.getItem('qa_students')||'[]');
+function show(id){['home','trial','find','video','login'].forEach(x=>document.getElementById(x).classList.add('hidden'));document.getElementById(id).classList.remove('hidden');window.scrollTo(0,0)}
+function submitTrial(){let n=document.getElementById('tname').value;let c=document.getElementById('tcourse').value;let co=document.getElementById('tcountry').value;let msg='Assalam-o-Alaikum, Qari Asif Amin Institute - Free Trial chahiye. Name:'+n+' Course:'+c+' Country:'+co;window.open('https://wa.me/923454415638?text='+encodeURIComponent(msg));document.getElementById('trialMsg').innerText='✅ فارم تیار ہے، WhatsApp کھل گیا ہے۔'}
+function findStudents(){let co=document.getElementById('fcountry').value||'USA';let ci=document.getElementById('fcity').value||'London';let data={USA:['حفظ + تجوید سب سے زیادہ','شام 5-9 بجے (USA ٹائم)','فیس: $50-$80 ماہانہ'],UK:['ناظرہ + قاعدہ سب سے زیادہ','شام 4-8 بجے (UK ٹائم)','فیس: £40-£60 ماہانہ'],Canada:['حفظ + عربی','شام 5-9 بجے','فیس: $60-$80'],Australia:['قاعدہ + ناظرہ','شام 5-8 بجے','فیس: $50-$70'],UAE:['تجوید + ترجمہ','شام 6-9 بجے','فیس: 150-250 AED']};let d=data[co]||data['USA'];document.getElementById('findOut').innerHTML='<b>'+ci+', '+co+' - AI رپورٹ</b><br>• مانگ: <b>زیادہ</b> - اس شہر میں آن لائن قرآن ٹیچر کی تلاش بڑھ رہی ہے<br>• بہترین کورس: '+d[0]+'<br>• بہترین ٹائم: '+d[1]+'<br>• بہترین فیس: '+d[2]+'<br>• مشورہ: 3 دن فری ٹرائل والا ایڈ اسی شہر میں چلائیں، ویڈیو + لنک شیئر کریں۔';}
+function saveStudent(){let n=document.getElementById('sname').value;if(!n)return alert('نام لکھیں');students.push({name:n,country:document.getElementById('scountry').value,course:document.getElementById('scourse2').value,teacher:document.getElementById('steacher').value});localStorage.setItem('qa_students',JSON.stringify(students));renderStudents();}
+function renderStudents(){document.getElementById('studentList').innerHTML='<h4>سیو شدہ اسٹوڈنٹس: '+students.length+'</h4>'+students.map(s=>'<p>• '+s.name+' - '+s.country+' - '+s.course+' - ٹیچر: '+s.teacher+'</p>').join('')}renderStudents();
+function makeLink(){let t=document.getElementById('vtitle').value||'3 دن فری ٹرائل - آن لائن قرآن کلاسز';document.getElementById('vcap').value='🕌 '+t+'\n📖 قاری آصف امین انسٹیٹیوٹ\n✅ 3 دن فری ٹرائل\n📲 WhatsApp: +92 345 4415638\n#QuranClasses #OnlineQuran #QariAsifAmin #Hifz #Tajweed';let f=document.getElementById('vfile').files[0];if(f){let u=URL.createObjectURL(f);let p=document.getElementById('preview');p.src=u;p.style.display='block';}let link='https://oficialfarooqkhan-hash.github.io/qari-asif-amin/?video='+encodeURIComponent(t);document.getElementById('videoOut').innerHTML='<b>✅ آپ کا لنک بن گیا:</b><br><span style="color:#ffd700">'+link+'</span><br><button onclick="navigator.clipboard.writeText(\''+link+'\');alert(\'لنک کاپی ہو گیا\')">📋 لنک کاپی کریں</button>';}
+function doLogin(){let r=document.getElementById('role').value;let p=document.getElementById('pass').value;if(!p)return alert('پاسورڈ لکھیں');let html='';if(r=='admin'){html='<h3>👑 ایڈمن پینل - قاری آصف امین انسٹیٹیوٹ</h3><div class=grid><div class=card>کل اسٹوڈنٹس<br><b style=font-size:28px>'+students.length+'</b></div><div class=card>کل ٹیچرز<br><b style=font-size:28px>0 - نیا ٹیچر ایڈ کریں</b></div><div class=card>آج کی کلاسز<br><b>ٹیچر وائز دیکھیں</b></div><div class=card>حساب<br><b>1 اسٹوڈنٹ = ٹیچر سے 10,000 / ماہ</b></div></div><h4>حفظ ٹریکنگ - سبق / سبقی / منزل</h4><table><tr><th>اسٹوڈنٹ</th><th>سبق</th><th>سبقی</th><th>منزل</th><th>حاضری</th></tr><tr><td>مثال: احمد</td><td>سورہ یٰس</td><td>پچھلا سبق</td><td>پارہ 1</td><td>✅ حاضر</td></tr></table><p>ٹیچر کو اسٹوڈنٹ دیں، ٹیچر کا الگ پاسورڈ بنائیں، کلاس لنک صرف اس ٹیچر + اسٹوڈنٹ کو نظر آئے گا، نمبر کسی کو نہیں۔ کلاس اکیڈمی کے اندر رہتی ہے، لنک آگے نہیں جاتا۔</p><button onclick="alert(\'Change Password: نیا پاسورڈ یہاں سے بدل سکتے ہیں\')">🔑 Change Password</button>';}else if(r=='teacher'){html='<h3>👨‍🏫 ٹیچر پورٹل</h3><p>آپ کو صرف اپنے اسٹوڈنٹس نظر آئیں گے۔ دوسرے ٹیچر کے نہیں۔</p><table><tr><th>اسٹوڈنٹ</th><th>کلاس ٹائم</th><th>حاضری</th><th>سبق</th></tr><tr><td>آپ کا اسٹوڈنٹ</td><td>شام 6 بجے</td><td><button style=width:auto>✅ حاضر</button></td><td>سبق / سبقی / منزل لکھیں</td></tr></table><p>کلاس لنک: صرف آپ + اسٹوڈنٹ کو نظر آئے گا۔</p><button onclick="alert(\'Change Password\')">🔑 Change Password</button>';}else{html='<h3>👨‍🎓 اسٹوڈنٹ / والدین پورٹل</h3><p>اپنی کلاس، اپنا ٹیچر، اپنی پروگریس، Parental Watch - والدین کلاس دیکھ سکتے ہیں۔</p><table><tr><th>دن</th><th>سبق</th><th>پروگریس</th></tr><tr><td>آج</td><td>ناظرہ - سورہ فاتحہ</td><td>⭐⭐⭐⭐⭐</td></tr></table><p>ہوم ورک، حاضری، رپورٹ یہیں نظر آئے گی۔</p>';}document.getElementById('dashboard').innerHTML=html;}
+</script>
+</body>
+</html>
