@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Qari Asif Amin - Auto Students + Ads Software</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui;background:#04120c;color:#fff;padding-bottom:30px}
+header{background:linear-gradient(135deg,#052e1d,#0a5c38,#c9a227);padding:20px 12px;text-align:center;border-bottom:4px solid #ffd700}
+.wrap{max-width:900px;margin:auto;padding:12px}
+.card{background:#fff;color:#111;border-radius:18px;padding:16px;margin:12px 0}
+.card h2{margin:0 0 10px;color:#0a5c38}
+input,select,textarea{width:100%;padding:14px;border-radius:12px;border:1px solid #ccc;font-size:16px;margin:6px 0;background:#f9f9f9}
+button{border:0;padding:14px;border-radius:25px;font-weight:900;cursor:pointer;margin:5px 0;width:100%;font-size:16px;background:#c9a227;color:#111}
+.green{background:#25D366;color:#fff}.blue{background:#1877F2;color:#fff}.red{background:#FF0000;color:#fff}.pink{background:#ff2e7e;color:#fff}.purple{background:#8b5cf6;color:#fff}.dark{background:#111;color:#fff}.gold{background:#ffd700;color:#111}.black{background:#000;color:#fff}.gemini{background:linear-gradient(90deg,#4285F4,#9b72cb,#d96570);color:#fff}.orange{background:#ff6a00;color:#fff}
+video{width:100%;border-radius:12px;background:#000}
+.box{border:2px dashed #c9a227;padding:14px;text-align:center;border-radius:14px;background:#fffbe6}
+.msg{background:#f1f1f1;padding:12px;border-radius:12px;line-height:1.7;white-space:pre-wrap;color:#111}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.stat{background:#0a5c38;color:#fff;padding:12px;border-radius:14px;text-align:center}.stat b{font-size:26px;display:block}
+table{width:100%;border-collapse:collapse}th,td{padding:9px;text-align:left;border-bottom:1px solid #ddd;font-size:13px}th{background:#0a5c38;color:#fff}
+.top button{width:auto;padding:10px 16px;margin:2px}
+.aiBox{background:#eef2ff;border:2px solid #4285F4;padding:12px;border-radius:14px;margin-top:10px}
+.adsBox{background:#fff7e6;border:2px solid #ff6a00;padding:12px;border-radius:14px;margin-top:10px}
+</style>
+</head>
+<body>
+<header>
+<div style="font-size:45px">📖🌙</div>
+<h1 style="margin:5px 0">Qari Asif Amin - Auto Software</h1>
+<p>Online Quran Academy | Auto Students + Adds Center</p>
+<div class="top">
+<button class="dark" onclick="go('s1')">🔍 Auto Search</button>
+<button class="dark" onclick="go('sAds')">📢 Adds Chalayein</button>
+<button class="dark" onclick="go('s2')">🎥 Video</button>
+<button class="dark" onclick="go('s3')">👨‍🎓 List</button>
+<button class="dark" onclick="go('s4')">🔐 Admin</button>
+</div>
+</header>
+<div class="wrap">
+
+<div class="card" id="s1">
+<h2>🔍 1. AUTO Students Dhoondein - 1 Click</h2>
+<label>Mulk:</label>
+<select id="country"><option>USA</option><option>UK</option><option>Canada</option><option>Australia</option><option>UAE</option><option>Saudi Arabia</option><option>Germany</option><option>Pakistan</option></select>
+<label>Sheher:</label><input id="city" value="New York">
+<label>Course:</label><select id="course"><option>Quran Teacher</option><option>Online Quran Academy</option><option>Quran Classes for Kids</option><option>Hifz Teacher</option></select>
+
+<button class="gold" style="font-size:18px;padding:16px" onclick="autoAll()">🚀 SAB EK SAATH KHOLO - Google + ChatGPT + Gemini</button>
+<p style="text-align:center;font-size:13px">Dabate hi 3 tab khulenge + Message Copy ho jayega</p>
+
+<button class="gold" onclick="openGoogle()">🔍 Sirf Google</button>
+<button class="black" onclick="openChatGPT()">🤖 Sirf ChatGPT</button>
+<button class="gemini" onclick="openGemini()">✨ Sirf Gemini</button>
+<button class="blue" onclick="openFB()">📘 Facebook Groups</button>
+<button class="pink" onclick="openTikTok()">🎵 TikTok Search</button>
+<button class="red" onclick="openYT()">▶️ YouTube Search</button>
+
+<div class="aiBox">
+<h3 style="margin:0">🤖 Auto Message - Jo ChatGPT / Gemini ko jayega:</h3>
+<div class="msg" id="aiPrompt"></div>
+<button class="purple" onclick="copyAIPrompt()">📋 Is Message ko Copy Karein</button>
+</div>
+<p id="msg1" style="color:green;font-weight:bold"></p>
+</div>
+
+<div class="card" id="sAds">
+<h2>📢 2. APNE ADDS CHALAYEIN - Har Platform Par</h2>
+<p>Apni Web se hi Adds chalao. Button dabao, Adds wala page khulega.</p>
+<label>Apne Add ka Text:</label>
+<textarea id="adText" rows="4">Assalam-o-Alaikum! 🌙
+Main Qari Asif Amin hoon - Online Quran Academy.
+✅ 3 Din FREE Trial Class
+✅ Norani Qaida, Nazra, Hifz, Tajweed
+✅ Bachon aur Badeon ke liye - USA, UK, Canada, Australia
+WhatsApp: +92 345 4415638
+Website: https://oficialfarooqkhan-hash.github.io/qari-asif-amin/software3.html</textarea>
+<label>Add ka Budget (Roz ka):</label>
+<select id="adBudget"><option>$5 Roz - Shuru ke liye best</option><option>$10 Roz</option><option>$20 Roz</option><option>$50 Roz</option></select>
+<label>Kis Mulk me Add dikhana hai?</label>
+<select id="adCountry"><option>USA</option><option>UK</option><option>Canada</option><option>Australia</option><option>UAE</option><option>Saudi Arabia</option><option>USA + UK + Canada - Sab</option></select>
+<button class="orange" onclick="copyAd()">📋 Add ka Text Copy Karein</button>
+<div class="adsBox">
+<h3 style="margin:0;color:#ff6a00">👇 Yahan se Adds Chalayein:</h3>
+<button class="blue" onclick="openFBAds()">📘 Facebook + Instagram Add Chalayein</button>
+<button class="gold" onclick="openGoogleAds()">🔍 Google Add Chalayein</button>
+<button class="black" onclick="openTikTokAds()">🎵 TikTok Add Chalayein</button>
+<button class="red" onclick="openYTAds()">▶️ YouTube Add Chalayein</button>
+<button class="green" onclick="openWAAds()">💬 WhatsApp Add / Status</button>
+<button class="purple" onclick="openChatGPTAds()">🤖 ChatGPT se Add ka Text Banwayein</button>
+<button class="gemini" onclick="openGeminiAds()">✨ Gemini se Add ka Text Banwayein</button>
+</div>
+<p style="font-size:13px;background:#fff3cd;padding:10px;border-radius:10px">⚠️ Note: Adds chalane ke liye Facebook / Google par apna Card lagana hota hai. Ye button aapko seedha Adds wale page par le jayega, wahan se 2 minute me Add shuru ho jayega.</p>
+</div>
+
+<div class="card" id="s2">
+<h2>🎥 3. Video Upload - Link Share</h2>
+<div class="box"><p style="font-size:30px">📁</p><p>Yahan se Video Chunein</p><input type="file" id="videoInput" accept="video/*" onchange="showVideo()"></div>
+<input id="vTitle" placeholder="Video ka Naam likhein">
+<select id="vCat"><option>Quran Tilawat</option><option>Norani Qaida Lesson</option><option>Hifz Class</option><option>Tajweed Lesson</option><option>Free Trial Class</option></select>
+<div id="previewCard" style="display:none"><video id="myVideo" controls playsinline></video><h3 id="showTitle"></h3></div>
+<input id="vLink" placeholder="Video Link yahan paste karein">
+<button class="green" onclick="makeShare()">🔗 Share Link Banayein</button>
+<div id="shareBox" style="display:none"><div class="msg" id="shareMsg"></div>
+<button class="blue" onclick="copyLink()">📋 Copy Karein</button>
+<button class="green" onclick="shareWA2()">💬 WhatsApp Share</button>
+</div>
+<button class="purple" onclick="saveVideo()">➕ Video Save Karein</button>
+<div id="vList"></div>
+</div>
+
+<div class="card" id="s3">
+<h2>👨‍🎓 4. Students ki List</h2>
+<input id="sName" placeholder="Student Naam *">
+<input id="sPhone" placeholder="WhatsApp Number">
+<select id="sCountry"><option>USA</option><option>UK</option><option>Canada</option><option>Australia</option><option>UAE</option><option>Saudi Arabia</option><option>Pakistan</option></select>
+<select id="sCourse"><option>Norani Qaida</option><option>Nazra Quran</option><option>Hifz-e-Quran</option><option>Tajweed</option></select>
+<select id="sFees"><option>Free Trial 🎁</option><option>Paid ✅</option><option>Unpaid ❌</option></select>
+<button class="green" onclick="addStudent()">➕ Student Add Karein</button>
+<input id="searchS" onkeyup="renderAll()" placeholder="🔍 Student dhoondein...">
+<div style="overflow:auto"><table><thead><tr><th>Naam</th><th>Mulk / Number</th><th>Course</th><th>Action</th></tr></thead><tbody id="sBody"></tbody></table></div>
+</div>
+
+<div class="card" id="s4">
+<h2>🔐 5. Admin Panel</h2>
+<div id="loginCard" style="text-align:center"><p>Password likhein:</p><input type="password" id="pass" placeholder="Password"><button onclick="doLogin()">🔓 Admin Kholein</button><p>Password: <b>Asifamin@83</b></p></div>
+<div id="adminArea" style="display:none">
+<div class="grid"><div class="stat">Students<b id="c1">0</b></div><div class="stat">Videos<b id="c2">0</b></div><div class="stat">Total<b id="c3">0</b></div></div>
+<button class="red" onclick="clearStudents()">🗑️ Sare Students Delete</button>
+<button class="red" onclick="clearVideos()">🗑️ Sari Videos Delete</button>
+<input id="newPass" placeholder="Naya Password"><button onclick="changePass()">🔐 Password Badlein</button><button onclick="doLogout()">🚪 Logout</button>
+</div>
+</div>
+
+</div>
+<script>
+var myPass = localStorage.getItem('qari_admin_pass') || 'Asifamin@83';
+var students=[];var videos=[];
+try{students=JSON.parse(localStorage.getItem('qari_students2')||'[]');}catch(e){students=[]}
+try{videos=JSON.parse(localStorage.getItem('qari_videos')||'[]');}catch(e){videos=[]}
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});}
+function getPrompt(){var c=document.getElementById('country').value;var city=document.getElementById('city').value;var co=document.getElementById('course').value;return "Mujhe "+c+" ke "+city+" me rehne wale Muslim Parents dhoondne hain jo apne bachon ke liye "+co+" dhoond rahe hain. Mujhe batayein: 1) Facebook Groups ke naam 2) TikTok par kya post karoon 3) WhatsApp ke liye 5 tayyar messages English me 4) Kahan se students milenge? Main Qari Asif Amin hoon - Online Quran Academy - 3 Din FREE Trial - WhatsApp +92 345 4415638 - Website https://oficialfarooqkhan-hash.github.io/qari-asif-amin/software3.html";}
+function updatePrompt(){document.getElementById('aiPrompt').innerText=getPrompt();}
+function openGoogle(){var q=document.getElementById('country').value+' '+document.getElementById('city').value+' '+document.getElementById('course').value;window.open('https://www.google.com/search?q='+encodeURIComponent(q),'_blank');}
+function openFB(){window.open('https://www.facebook.com/search/groups/?q='+encodeURIComponent(document.getElementById('country').value+' '+document.getElementById('course').value),'_blank');}
+function openTikTok(){window.open('https://www.tiktok.com/search?q='+encodeURIComponent(document.getElementById('course').value),'_blank');}
+function openYT(){window.open('https://www.youtube.com/results?search_query='+encodeURIComponent(document.getElementById('course').value),'_blank');}
+function openChatGPT(){updatePrompt();navigator.clipboard.writeText(getPrompt());alert('ChatGPT ke liye Message Copy Ho Gaya ✅ Ab ChatGPT khul raha hai, wahan Paste karein!');window.open('https://chatgpt.com/','_blank');}
+function openGemini(){updatePrompt();navigator.clipboard.writeText(getPrompt());alert('Gemini ke liye Message Copy Ho Gaya ✅ Ab Gemini khul raha hai, wahan Paste karein!');window.open('https://gemini.google.com/','_blank');}
+function autoAll(){updatePrompt();navigator.clipboard.writeText(getPrompt());alert('SAB KHUL RAHE HAIN ✅ Message Copy Ho Gaya! Ab 3 Tabs me Paste karein.');openGoogle();setTimeout(function(){window.open('https://chatgpt.com/','_blank');},500);setTimeout(function(){window.open('https://gemini.google.com/','_blank');},1000);}
+function copyAIPrompt(){updatePrompt();navigator.clipboard.writeText(getPrompt());alert('Copy Ho Gaya ✅');}
+function copyAd(){navigator.clipboard.writeText(document.getElementById('adText').value);alert('Add ka Text Copy Ho Gaya ✅ Ab Facebook / Google me Paste karein');}
+function openFBAds(){copyAd();window.open('https://www.facebook.com/adsmanager/','_blank');}
+function openGoogleAds(){copyAd();window.open('https://ads.google.com/','_blank');}
+function openTikTokAds(){copyAd();window.open('https://ads.tiktok.com/','_blank');}
+function openYTAds(){copyAd();window.open('https://ads.google.com/','_blank');}
+function openWAAds(){window.open('https://wa.me/923454415638?text='+encodeURIComponent(document.getElementById('adText').value),'_blank');}
+function openChatGPTAds(){navigator.clipboard.writeText('Mere liye Facebook Add ka best text likh do: '+document.getElementById('adText').value+' Budget '+document.getElementById('adBudget').value+' Country '+document.getElementById('adCountry').value);alert('ChatGPT khul raha hai, wahan Paste karein!');window.open('https://chatgpt.com/','_blank');}
+function openGeminiAds(){navigator.clipboard.writeText('Mere liye Facebook Add ka best text likh do: '+document.getElementById('adText').value+' Budget '+document.getElementById('adBudget').value+' Country '+document.getElementById('adCountry').value);alert('Gemini khul raha hai, wahan Paste karein!');window.open('https://gemini.google.com/','_blank');}
+function showVideo(){var f=document.getElementById('videoInput').files[0];if(!f)return;var url=URL.createObjectURL(f);document.getElementById('previewCard').style.display='block';document.getElementById('myVideo').src=url;document.getElementById('showTitle').innerText=document.getElementById('vTitle').value||f.name;alert('Video Lag Gayi ✅');}
+function makeShare(){var link=document.getElementById('vLink').value.trim();if(!link){alert('Pehle Video Link Paste Karein!');return;}var title=document.getElementById('vTitle').value||'Qari Asif Amin Video';document.getElementById('shareBox').style.display='block';document.getElementById('shareMsg').innerText='🎥 '+title+'\nVideo: '+link+'\nQari Asif Amin - WhatsApp +92 345 4415638';alert('Link Ban Gaya ✅');}
+function copyLink(){navigator.clipboard.writeText(document.getElementById('shareMsg').innerText);alert('Copy Ho Gaya ✅');}
+function shareWA2(){window.open('https://wa.me/?text='+encodeURIComponent(document.getElementById('shareMsg').innerText),'_blank');}
+function addStudent(){var name=document.getElementById('sName').value.trim();if(!name){alert('Pehle Naam Likhein!');return;}students.unshift({name:name,phone:document.getElementById('sPhone').value,country:document.getElementById('sCountry').value,course:document.getElementById('sCourse').value,fees:document.getElementById('sFees').value});localStorage.setItem('qari_students2',JSON.stringify(students));renderAll();document.getElementById('sName').value='';alert('Student Add Ho Gaya ✅');}
+function saveVideo(){var title=document.getElementById('vTitle').value||'Meri Video';videos.unshift({title:title,link:document.getElementById('vLink').value||'Mobile me hai',cat:document.getElementById('vCat').value});localStorage.setItem('qari_videos',JSON.stringify(videos));renderAll();alert('Video Save Ho Gayi ✅');}
+function delStudent(i){if(confirm('Delete karein?')){students.splice(i,1);localStorage.setItem('qari_students2',JSON.stringify(students));renderAll();}}
+function delVideo(i){if(confirm('Video Delete karein?')){videos.splice(i,1);localStorage.setItem('qari_videos',JSON.stringify(videos));renderAll();}}
+function clearStudents(){if(confirm('Sare Delete?')){students=[];localStorage.setItem('qari_students2',JSON.stringify(students));renderAll();}}
+function clearVideos(){if(confirm('Sari Videos Delete?')){videos=[];localStorage.setItem('qari_videos',JSON.stringify(videos));renderAll();}}
+function doLogin(){if(document.getElementById('pass').value===myPass){document.getElementById('loginCard').style.display='none';document.getElementById('adminArea').style.display='block';renderAll();alert('Welcome Qari Sahab ✅');}else{alert('Ghalat Password! Sahi hai: Asifamin@83');}}
+function doLogout(){document.getElementById('adminArea').style.display='none';document.getElementById('loginCard').style.display='block';}
+function changePass(){var n=document.getElementById('newPass').value;if(!n){alert('Naya Password likhein');return;}localStorage.setItem('qari_admin_pass',n);myPass=n;alert('Password Badal Gaya: '+n);}
+function renderAll(){
+document.getElementById('c1').innerText=students.length;document.getElementById('c2').innerText=videos.length;document.getElementById('c3').innerText=students.length+videos.length;
+var q=(document.getElementById('searchS').value||'').toLowerCase();
+var list=students.filter(function(s){return s.name.toLowerCase().indexOf(q)>-1});
+document.getElementById('sBody').innerHTML=list.map(function(s){return '<tr><td><b>'+s.name+'</b></td><td>'+s.country+'<br>'+(s.phone||'')+'</td><td>'+s.course+'<br>'+(s.fees||'')+'</td><td><button onclick="window.open(\'https://wa.me/'+(s.phone||'').replace(/[^0-9]/g,'')+'\',\'_blank\')">WhatsApp</button><br><button style="background:#e11d48;color:#fff" onclick="delStudent('+students.indexOf(s)+')">Delete</button></td></tr>'}).join('')||'<tr><td colspan=4>Koi Student Nahi</td></tr>';
+document.getElementById('vList').innerHTML=videos.map(function(v,i){return '<div style="background:#f1f1f1;padding:10px;border-radius:10px;margin:8px 0;color:#111"><b>'+v.title+'</b> - '+v.cat+'<br><a href="'+v.link+'" target="_blank">'+v.link+'</a><br><button style="background:#e11d48;color:#fff" onclick="delVideo('+i+')">Delete</button></div>'}).join('')||'<p>Koi Video Nahi</p>';
+}
+updatePrompt();renderAll();
+</script>
+</body>
+</html>
