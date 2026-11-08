@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google se Students Dhoondein - Qari Asif Amin</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui;background:#04120c;color:#fff}
+header{background:linear-gradient(135deg,#052e1d,#0a5c38,#c9a227);padding:20px;text-align:center;border-bottom:4px solid #ffd700}
+.wrap{max-width:1000px;margin:auto;padding:12px}
+input,select{width:100%;padding:14px;border-radius:14px;border:0;font-size:16px;margin:6px 0}
+.card{background:#0d2419;border:1px solid #2b6b4a;border-radius:16px;padding:16px;margin:10px 0}
+button{background:#c9a227;border:0;padding:13px;border-radius:25px;font-weight:900;cursor:pointer;margin:4px;width:100%;font-size:16px}
+.green{background:#25D366;color:#fff}.blue{background:#4285F4;color:#fff}.red{background:#FF0000;color:#fff}.purple{background:#8b5cf6;color:#fff}.pink{background:#ff2e7e;color:#fff}
+table{width:100%;border-collapse:collapse;background:#fff;color:#111;border-radius:12px;overflow:hidden}
+th,td{padding:9px;text-align:left;border-bottom:1px solid #ddd;font-size:13px}
+th{background:#0a5c38;color:#fff}
+.badge{background:#ffd700;color:#000;padding:4px 10px;border-radius:20px;font-weight:900;font-size:12px}
+.msg{background:#fff;color:#111;padding:12px;border-radius:12px;line-height:1.7;white-space:pre-wrap}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div style="font-size:40px">🔍🌍</div><h1>Google se Students Dhoondein</h1><p>Qari Asif Amin Institute | Search Karein - Google Khulega - Students Mileinge</p></header>
+<div class="wrap">
+<div class="card" style="border:2px solid #ffd700">
+<h3>🔍 1. Yahan Search Karein</h3>
+<label>Mulk Chunein:</label><select id="country"></select>
+<label>Sheher Likhein:</label><input id="city" placeholder="Misal: New York, London, Toronto, Dubai">
+<label>Course:</label><select id="course"><option>Quran Teacher</option><option>Hifz-e-Quran</option><option>Norani Qaida</option><option>Nazra Quran</option><option>Tajweed</option><option>Online Quran Academy</option></select>
+<button onclick="doGoogleSearch()">🔍 Google Par Students Dhoondein</button>
+<p style="font-size:13px;color:#ffd700">👆 Dabate hi Google khul jayega, wahan se Facebook Groups milenge.</p>
+</div>
+<div id="detail"></div>
+<div class="card">
+<h3>🎯 2. Google + Facebook + TikTok</h3>
+<p id="targetText" style="color:#ffd700">Pehle upar Mulk + Sheher likhein.</p>
+<div class="grid">
+<button class="blue" onclick="openLink('google')">🔍 Google Par Dhoondein</button>
+<button style="background:#1877F2;color:#fff" onclick="openLink('facebook')">📘 Facebook Groups</button>
+<button class="pink" onclick="openLink('tiktok')">🎵 TikTok Par Dhoondein</button>
+<button class="red" onclick="openLink('youtube')">▶️ YouTube Par Dhoondein</button>
+<button class="green" onclick="openLink('whatsapp')">💬 WhatsApp Groups</button>
+<button class="purple" onclick="openLink('instagram')">📸 Instagram Par Dhoondein</button>
+</div>
+</div>
+<div class="card">
+<h3>📋 3. Meri Students ki List</h3>
+<input id="sName" placeholder="Student Naam *">
+<input id="sPhone" placeholder="WhatsApp Number - Misal +1 234...">
+<select id="sCountry"></select>
+<select id="sCourse"><option>Norani Qaida</option><option>Nazra Quran</option><option>Hifz-e-Quran</option><option>Tajweed</option></select>
+<button class="green" onclick="addStudent()">➕ List me Add Karein</button>
+<input id="searchStudent" onkeyup="renderStudents()" placeholder="🔍 List me student dhoondein...">
+<div style="overflow:auto"><table><thead><tr><th>Naam</th><th>Mulk / Number</th><th>Course</th><th>Action</th></tr></thead><tbody id="studentBody"></tbody></table></div>
+</div>
+<div class="card">
+<h3>🌍 4. Tamam Mulk - Click Karein, Google Khulega</h3>
+<div style="overflow:auto;max-height:450px"><table><thead><tr><th>Mulk</th><th>Code</th><th>Fees</th><th>Demand</th><th>Google</th></tr></thead><tbody id="tableBody"></tbody></table></div>
+</div>
+<div class="card">
+<h3>📋 5. Tayyar Message</h3>
+<div class="msg" id="readyMsg">Assalam-o-Alaikum!
+Main Qari Asif Amin hoon - Online Quran Academy.
+Aapke bachon ke liye:
+✅ 3 Din FREE Trial - Koi Fees Nahi
+✅ Norani Qaida, Nazra, Hifz, Tajweed
+✅ 1-on-1 Class
+Free Trial ke liye reply karein: YES
+WhatsApp: +92 345 4415638
+Website: https://oficialfarooqkhan-hash.github.io/qari-asif-amin/</div>
+<button class="blue" onclick="copyMsg()">📋 Message Copy Karein</button>
+</div>
+</div>
+<script>
+let countries=[{n:"USA",code:"+1",fees:"$60 - $90",demand:"🔥 95%",city:"New York"},{n:"UK",code:"+44",fees:"£40 - £70",demand:"🔥 94%",city:"London"},{n:"Canada",code:"+1",fees:"$70 - $100",demand:"🔥 92%",city:"Toronto"},{n:"Australia",code:"+61",fees:"$80 - $120",demand:"🔥 90%",city:"Sydney"},{n:"UAE - Dubai",code:"+971",fees:"150 - 250 AED",demand:"🔥 93%",city:"Dubai"},{n:"Saudi Arabia",code:"+966",fees:"150 - 300 SAR",demand:"88%",city:"Riyadh"},{n:"Qatar",code:"+974",fees:"200 - 300 QAR",demand:"86%",city:"Doha"},{n:"Germany",code:"+49",fees:"€40 - €70",demand:"🔥 91%",city:"Berlin"},{n:"France",code:"+33",fees:"€40 - €65",demand:"89%",city:"Paris"},{n:"Italy",code:"+39",fees:"€35 - €60",demand:"85%",city:"Rome"},{n:"Turkey",code:"+90",fees:"500 - 900 TRY",demand:"84%",city:"Istanbul"},{n:"Pakistan",code:"+92",fees:"Rs 5000 - 8000",demand:"88%",city:"Lahore"},{n:"India",code:"+91",fees:"₹1500 - ₹3000",demand:"87%",city:"Delhi"},{n:"Malaysia",code:"+60",fees:"150 - 250 MYR",demand:"85%",city:"Kuala Lumpur"},{n:"South Africa",code:"+27",fees:"800 - 1200 ZAR",demand:"79%",city:"Johannesburg"},{n:"Norway",code:"+47",fees:"400 - 600 NOK",demand:"83%",city:"Oslo"},{n:"Sweden",code:"+46",fees:"400 - 600 SEK",demand:"82%",city:"Stockholm"},{n:"Netherlands",code:"+31",fees:"€40 - €65",demand:"86%",city:"Amsterdam"},{n:"New Zealand",code:"+64",fees:"$80 - $120",demand:"78%",city:"Auckland"},{n:"Kuwait",code:"+965",fees:"20 - 35 KWD",demand:"84%",city:"Kuwait City"}];
+let sel=document.getElementById('country');let sel2=document.getElementById('sCountry');
+countries.forEach((c,i)=>{let o=document.createElement('option');o.value=i;o.textContent=c.n+" ("+c.code+")";sel.appendChild(o);let o2=document.createElement('option');o2.value=c.n;o2.textContent=c.n;sel2.appendChild(o2);});
+document.getElementById('tableBody').innerHTML=countries.map((c,i)=>`<tr><td><b>${c.n}</b></td><td>${c.code}</td><td>${c.fees}</td><td>${c.demand}</td><td><button onclick="pickGoogle(${i})">Google 🔍</button></td></tr>`).join('');
+function getQuery(){let c=countries[sel.value];let city=document.getElementById('city').value||c.city;let course=document.getElementById('course').value;return {c,city,course};}
+function doGoogleSearch(){openLink('google');}
+function pickGoogle(i){sel.value=i;document.getElementById('city').value=countries[i].city;openLink('google');}
+function openLink(type){let {c,city,course}=getQuery();document.getElementById('targetText').innerHTML=`Aap dhoond rahe hain: <b>${course} - ${city}, ${c.n}</b> | Fees: ${c.fees} | Code: ${c.code}`;let q="";if(type=='google') q=`${course} teacher ${city} ${c.n} Muslim students Facebook group`;if(type=='facebook') q=`Muslims in ${city} Facebook group Pakistani in ${city}`;if(type=='tiktok') q=`Quran teacher ${city} Muslim kids`;if(type=='youtube') q=`Online Quran Academy ${city} students`;if(type=='whatsapp') q=`${city} Muslim community WhatsApp group link`;if(type=='instagram') q=`Muslim moms ${city} Quran teacher`;let url="";if(type=='tiktok') url=`https://www.tiktok.com/search?q=${encodeURIComponent(q)}`;else if(type=='youtube') url=`https://www.youtube.com/results?search_query=${encodeURIComponent(q)}`;else if(type=='instagram') url=`https://www.instagram.com/explore/search/keyword/?q=${encodeURIComponent(q)}`;else url=`https://www.google.com/search?q=${encodeURIComponent(q)}`;document.getElementById('detail').innerHTML=`<div class="card"><span class="badge">${c.demand} DEMAND</span><h3>${city} - ${c.n} 🌍</h3><p>📞 Code: ${c.code} | 💰 Fees: ${c.fees} | 🎯 Google me ye likha gaya: <b>${q}</b></p><p>Google khul gaya hai, wahan se Groups kholein.</p><button class="blue" onclick="window.open('${url}','_blank')">🔍 Dobara Google Kholein</button></div>`;window.open(url,'_blank');}
+let students=JSON.parse(localStorage.getItem('qari_students2')||'[]');
+function save(){localStorage.setItem('qari_students2',JSON.stringify(students));}
+function addStudent(){let name=document.getElementById('sName').value.trim();let phone=document.getElementById('sPhone').value.trim();let country=document.getElementById('sCountry').value;let course=document.getElementById('sCourse').value;if(!name){alert('Naam likhein!');return;}students.unshift({name,phone,country,course});save();renderStudents();document.getElementById('sName').value='';document.getElementById('sPhone').value='';alert('MashaAllah! '+name+' Add Ho Gaya ✅');}
+function renderStudents(){let q=(document.getElementById('searchStudent').value||'').toLowerCase();let list=students.filter(s=>s.name.toLowerCase().includes(q)||s.country.toLowerCase().includes(q)||(s.phone||'').includes(q));document.getElementById('studentBody').innerHTML=list.map(s=>{let clean=(s.phone||'').replace(/[^0-9+]/g,'');return `<tr><td><b>${s.name}</b></td><td>${s.country}<br>${s.phone||''}</td><td>${s.course}</td><td><button class="green" onclick="window.open('https://wa.me/${clean}?text=Assalam-o-Alaikum ${s.name}, Main Qari Asif Amin hoon. Free Trial Class kab rakhein?')">WhatsApp 📲</button></td></tr>`;}).join('');}
+function copyMsg(){navigator.clipboard.writeText(document.getElementById('readyMsg').innerText);alert('Message Copy Ho Gaya!');}
+renderStudents();
+</script>
+</body>
+</html>
